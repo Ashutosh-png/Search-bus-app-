@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+body{
+background-color:black;
+
+}
+h1,label{
+color:white;
+
+}
+
+
+</style>
+<body>
+<center>
+ <h1>Add Buses for Year 2023</h1>
+    <form th:action="@{/add-buses-for-year}" th:object="${buses}" method="post">
+        <div>
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" th:field="*{from}" required>
+        </div>
+        <div>
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" th:field="*{to}" required>
+        </div>
+        <div>
+            <label for="time">Time:</label>
+            <input type="text" id="time" name="time" th:field="*{timeOfArrival}" >
+        </div>
+        <div>
+            <label for="via">Via:</label>
+            <input type="text" id="via" name="via" th:field="*{via}">
+        </div>
+        <div>
+            <label for="bustype">Bus Type:</label>
+            <input type="text" id="bustype" name="bustype" th:field="*{type}" required>
+        </div>
+        
+        <button type="submit">Add Buses</button>
+    </form>
+    </center>
+</body>
+</html>

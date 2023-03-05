@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Insert title here</title>
+
+</head>
+
+<body>
+<a href="/"><button>Back</button></a>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th  scope="col">From</th>
+      <th  scope="col">To</th>
+            <th  scope="col">Time</th>
+                        <th  scope="col">Via</th>
+                                                  <th  scope="col">Bus type</th>
+                                                  
+                                                    <th  scope="col">Price</th>
+                                                  <th  scope="col">Book</th>
+                                                    <th  scope="col">On</th>
+                                                  
+                                                  
+                                                    
+                                                    
+                                                
+                        
+            
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="bus : ${buses}">
+      <td th:text="${bus.from}"></td>
+      <td th:text="${bus.to}"></td>
+            <td th:text="${bus.timeOfArrival}"></td>
+                        <td th:text="${bus.via}"></td>
+                                               
+                                                 <td th:text="${bus.type}"></td>
+                                              <td th:text="${bus.price}"></td>
+                                            <td><a th:href="${bus.url}" target="_blank" ><button class="btn btn-success">Book Now</button></a></td>
+                                                                 <td th:text="${bus.web}"></td>
+                                            
+                                            
+                                             
+                                              
+                                                 
+                                                
+                        
+            
+      
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
